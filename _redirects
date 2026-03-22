@@ -1,0 +1,11 @@
+# Cloudflare Pages _redirects file
+# This file tells Cloudflare how to handle URL redirects.
+# It must live in the root of your project (same folder as index.html).
+#
+# FORMAT: /old-path  /new-path  [status-code]
+#
+# Example redirects — uncomment and edit as needed:
+# /home             /index.html        301
+# /get-in-touch     /contact.html      301
+#
+# Currently no redirects are active. Add your own below this line.

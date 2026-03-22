@@ -1,0 +1,96 @@
+/* ============================================================
+   animations.css — All keyframes and scroll-triggered animations
+   ============================================================ */
+
+/* === KEYFRAMES === */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ============================================================
+   HERO LOAD ANIMATIONS
+   These fire automatically on page load (no JS required).
+   ============================================================ */
+.hero-title {
+  animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-buttons {
+  animation: fadeInUp 1s ease 0.9s both;
+}
+
+/* ============================================================
+   SCROLL REVEAL — triggered by IntersectionObserver in animations.js
+   Elements start invisible and animate in when class "visible" is added.
+   ============================================================ */
+
+/* Fade + slide up (default) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide in from left */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   STAGGER DELAYS — for grids where children animate one-by-one.
+   Applied alongside .animate-on-scroll on child elements.
+   ============================================================ */
+.animate-stagger:nth-child(1) { transition-delay: 0s; }
+.animate-stagger:nth-child(2) { transition-delay: 0.1s; }
+.animate-stagger:nth-child(3) { transition-delay: 0.2s; }
+.animate-stagger:nth-child(4) { transition-delay: 0.3s; }
+.animate-stagger:nth-child(5) { transition-delay: 0.4s; }
+.animate-stagger:nth-child(6) { transition-delay: 0.5s; }
+.animate-stagger:nth-child(7) { transition-delay: 0.6s; }
+.animate-stagger:nth-child(8) { transition-delay: 0.7s; }
+.animate-stagger:nth-child(9) { transition-delay: 0.8s; }
